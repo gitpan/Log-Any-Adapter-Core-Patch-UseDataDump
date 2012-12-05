@@ -1,0 +1,30 @@
+NAME
+    Log::Any::Adapter::Core::Patch::UseDataDump - Use Data::Dump
+
+VERSION
+    version 0.01
+
+SYNOPSIS
+     use Log::Any '$log';
+     use Log::Any::DD; # shortcut for Log::Any::Adapter::Core::Patch::UseDataDump;
+
+     $log->debug("See this data structure: %s", $some_data);
+
+DESCRIPTION
+    Log::Any dumps data structures using Data::Dumper with settings:
+    Indent=0. This is rather hard to read. This patch replaces dumping with
+    using Data::Dump which has nicer output.
+
+FAQ
+SEE ALSO
+    Log::Any::Adapter::Core::Patch::SetDumperIndent
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2012 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
